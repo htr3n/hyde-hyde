@@ -9,13 +9,13 @@ body
 
 .img-circle
 {
-    border-radius: 50%;
+    border-radius: 70%;
 }
 
 .headshot
 {
-    width: 115px;
-    height: 115px;
+    width: 140px;
+    height: 140px;
 }
 
 .brand
