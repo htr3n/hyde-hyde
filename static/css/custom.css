@@ -43,6 +43,10 @@ pre
     tab-size: 2;
 }
 
+strong
+{
+    font-weight: bold;
+}
 
 .hljs {
     white-space: pre;
