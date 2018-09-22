@@ -20,6 +20,9 @@
 	{{ with .Site.Params.social.linkedin }}
 	&nbsp;<a href="https://linkedin.com/in/{{.}}" rel="me"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
 	{{ end }}
+	{{ with .Site.Params.social.youtube }}
+	&nbsp;<a href="https://www.youtube.com/user/{{.}}" rel="me"><i class="fab fa-youtube fa-lg" aria-hidden="true"></i></a>
+	{{ end }}
 	{{ with .Site.Params.social.stackoverflow }}
 	&nbsp;<a href="https://stackoverflow.com/users/{{.}}" rel="me"><i class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
 	{{ end }}
