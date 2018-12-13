@@ -73,6 +73,16 @@ __`Hyde-hyde`__ essentially inherits most of Hyde's [options](https://github.com
   * `UtterancesIssueTerm = "pathname"` Method for Utterances to match issue's to posts (pathname, url, title, og:title)
   * `UtterancesTheme = "github-light"` Theme for Utterances (github-light, github-dark)
 
+* `[params.staticman]`: to use [Staticman](https://staticman.net/) for static comments.
+
+  ```toml
+  [params.staticman]
+      api = "https://staticman3.herokuapp.com/v3/entry/{gitlab|github}/{username}/{repo}/{branch}/comments"
+  [params.staticman.recaptcha]
+      sitekey = # your own reCAPTCHA site key
+      secret = # encrypt reCAPTCHA site secret with https://staticman3.herokuapp.com/v3/encrypt/{secret}
+  ```
+
 * `[params.social]`: in this section, you can set many social identities such as Twitter, Facebook, Github, Bitbucket, Gitlab, Instagram, LinkedIn, StackOverflow, Medium, Xing, Keybase.
 
   ```toml
