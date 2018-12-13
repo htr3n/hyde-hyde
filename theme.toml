@@ -2,8 +2,8 @@ name = "hyde-hyde"
 license = "MIT"
 licenselink = "https://github.com/htr3n/hyde-hyde/blob/master/LICENSE.md"
 description = "A simply cool Hyde inspired theme"
-tags = ["blog", "theme", "hyde", "highlight.js", "font-awesome", "google analytics", "disqus", "personal", "syntax highlighting", "responsive", "graphcomment"]
-features = ["blog", "theme", "highlight.js", "font-awesome", "responsive", "disqus", "graphcomment", "portfolio"]
+tags = ["blog", "theme", "hyde", "highlight.js", "font-awesome", "google analytics", "disqus", "personal", "syntax highlighting", "responsive", "graphcomment", "staticman"]
+features = ["blog", "theme", "highlight.js", "font-awesome", "responsive", "disqus", "graphcomment", "portfolio", "staticman"]
 homepage = "https://github.com/htr3n/hyde-hyde"
 min_version = "0.43"
 
