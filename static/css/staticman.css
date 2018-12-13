@@ -56,6 +56,9 @@
   margin-left: 58px;
 }
 
+.staticman-comments article {
+  margin: 30px 0px 30px 0px;
+}
 
 .staticman-comments .static-comment-reply {
   margin-left: 2em;
@@ -63,6 +66,10 @@
 
 .staticman-comments .comment-reply-btn a {
   margin: 0px 0px 14px 58px;
+}
+
+.staticman-comments .comment-reply-target {
+  margin: 0px 0px 0px 58px;
 }
 
 .staticman-comments .js-form {
