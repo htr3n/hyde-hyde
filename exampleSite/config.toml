@@ -41,6 +41,12 @@ theme = "hyde-hyde"
     # Table of contents
     #toc = none, "hugo", or "tocbot"
 
+#[params.staticman]
+#    api = "https://staticman3.herokuapp.com/v3/entry/{gitlab|github}/{username}/{repo}/{branch}/comments"
+#[params.staticman.recaptcha]
+#    sitekey = # your own reCAPTCHA site key
+#    secret = # encrypt reCAPTCHA site secret with https://staticman3.herokuapp.com/v3/encrypt/{secret}
+
 ## Social Accounts
 [params.social]
     github = "<username>"

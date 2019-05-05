@@ -5,5 +5,7 @@
         {{ partial "page-single/comment/graphcomment.html" . }}
     {{ else if .Site.Params.UtterancesRepo }}
         {{ partial "page-single/comment/utterances.html" . }}
+    {{ else if .Site.Params.Staticman }}
+        {{ partial "page-single/comment/staticman.html" . }}
     {{ end }}
 {{ end }}
