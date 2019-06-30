@@ -86,3 +86,25 @@
 		color: #8f5536;
 	}
 }
+
+.theme-base-01 {
+    .sidebar {
+            background-color: #373E43;
+    }
+    .content a {
+            color: #375EAB;
+    }
+    .related-posts li a:hover {
+            color: #373E43;
+    }
+    .posts li a {
+            color: #375EAB;
+            font-weight: bold;
+    }
+    .post-list__item a {
+            color: #000000;
+    }
+    .project__title a {
+            color: #000000;
+    }
+}
