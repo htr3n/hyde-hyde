@@ -3,7 +3,6 @@
   <!-- Google Analytics -->
   {{ template "_internal/google_analytics_async.html" . }}
 {{ end }}
-{{ partial "footer/footer.html" . }}
 {{ partial "highlight-js.html" . }}
 {{ with .Site.Params.toc }}
 {{ if and (eq . "tocbot") (ne $include_toc false) }}
