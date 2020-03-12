@@ -2,6 +2,7 @@
 <html lang="{{ .Site.LanguageCode }}">
     {{ block "header" . }}{{ end }}
     <body class="{{ .Site.Params.themeColor }} {{if .Site.Params.layoutReverse}}layout-reverse{{end}}">
+    {{ partial "body/custom.html" . }}
     {{ partial "sidebar.html" . }}
         <div class="content container">
             {{ block "content" . }}{{ end }}
