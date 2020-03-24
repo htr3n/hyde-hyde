@@ -1,9 +1,6 @@
+{{ partial "footer.html" . }}
+
 {{ $include_toc := .Params.include_toc}}
-{{ if .Site.GoogleAnalytics }}
-  <!-- Google Analytics -->
-  {{ template "_internal/google_analytics_async.html" . }}
-{{ end }}
-{{ partial "footer/font-awesome-js.html" . }}
 {{ partial "highlight-js.html" . }}
 {{ with .Site.Params.toc }}
 {{ if and (eq . "tocbot") (ne $include_toc false) }}
