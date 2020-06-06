@@ -48,4 +48,7 @@
 	{{ with .Site.Params.social.email }}
 	<a href="mailto:{{.}}" rel="me"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
 	{{ end }}
+	{{ with .Site.Params.social.mastodon }}
+	<a href="{{.}}" rel="me"><i class="fab fa-mastodon fa-lg" aria-hidden="true"></i></a>
+	{{ end }}
 </section>
