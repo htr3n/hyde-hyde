@@ -1,4 +1,4 @@
-{{ if or ((not (isset .Params "highlight")) and ((isset .Params "highlight") .Params.highlight)) }}
+{{ if (isset .Params "highlight") }}
     {{ $.Scratch.Set "hl_languages" (union (.Site.Params.highlightjslanguages) (.Params.highlightjslanguages)) }}
     {{ if (.Site.Params.highlightjs) }}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
