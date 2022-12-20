@@ -62,5 +62,8 @@
 	{{ end }}
 	{{ with .Site.Params.social.rss }}
 	<a href="{{.}}" rel="me"><i class="fas fa-rss fa-lg" aria-hidden="true"></i></a>
+	{{ end }}	
+	{{ with .Site.Params.social.mastodon }}
+	<a href="{{.}}" rel="me"><i class="fas fa-mastodon fa-lg" aria-hidden="true"></i></a>
 	{{ end }}
 </section>
