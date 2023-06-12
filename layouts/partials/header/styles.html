@@ -1,13 +1,16 @@
+<!--高亮-->
 {{ partial "header/styles-highlight.html" . }}
 
+<!--hyde-hyde.scss样式-->
 {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
-
 {{ $style := resources.Get "scss/hyde-hyde.scss" | toCSS $options | fingerprint }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
 
+<!--print.scss样式-->
 {{ $printStyle := resources.Get "scss/print.scss" | toCSS $options | fingerprint }}
 <link rel="stylesheet" href="{{ $printStyle.RelPermalink }}" integrity="{{ $printStyle.Data.Integrity }}" media="print">
 
+<!--toc-->
 {{ with .Site.Params.toc }}
 {{ if eq . "hugo" }}
 {{ $hugoToc := resources.Get "scss/hugo-toc.scss" | toCSS $options | fingerprint }}

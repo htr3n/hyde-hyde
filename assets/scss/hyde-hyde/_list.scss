@@ -1,27 +1,26 @@
 // for the list of posts
-
 .section__title {
-	font-size: $section__title-font-size;
+  //font-size: $section__title-font-size;
 }
 
 .post-list__item {
-	margin-bottom: 3em;
+  margin-bottom: 3em;
 }
 
 .item__title--big {
-	display: block;
-	font-size: $item__title-big-font-size;
-	line-height: 1.25;
+  display: block;
+  font-size: $item__title-big-font-size;
+  line-height: 1.25;
 }
 
 .item__title--small {
-	font-size: 1rem;
+  font-size: 1rem;
 }
 
 .item__date {
-	color: $item__date-color;
-	display: block;
-	font-size: $item__date-font-size;
-	margin-bottom: .2rem;
-	margin-top: .2rem;
+  color: $item__date-color;
+  display: block;
+  font-size: $item__date-font-size;
+  margin-bottom: .2rem;
+  margin-top: .2rem;
 }

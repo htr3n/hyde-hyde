@@ -3,13 +3,17 @@
 // Styles for managing the structural hierarchy of the site.
 
 .container {
-  max-width: 38rem;
-  padding-left:  1.5rem;
-  padding-right: 1.5rem;
-  margin-left:  auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin-right: auto;
+  display: block;
 }
 
 footer {
   margin-bottom: 2rem;
 }
+
+p {
+  margin: 0.4rem 0;
+}
+

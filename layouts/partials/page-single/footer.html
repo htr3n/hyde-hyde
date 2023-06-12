@@ -1,25 +1,1 @@
-{{ $include_toc := .Params.include_toc}}
-{{ if .Site.GoogleAnalytics }}
-  <!-- Google Analytics -->
-  {{ template "_internal/google_analytics_async.html" . }}
-{{ end }}
-{{ partial "footer/font-awesome-js.html" . }}
-{{ partial "highlight-js.html" . }}
-{{ with .Site.Params.toc }}
-{{ if and (eq . "tocbot") (ne $include_toc false) }}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.js"></script>
-<script type="text/javascript">
-  if (tocbot) {
-    tocbot.init({
-      // Where to render the table of contents.
-      tocSelector: '.toc',
-      // Where to grab the headings to build the table of contents.
-      contentSelector: '.post',
-      // Which headings to grab inside of the contentSelector element.
-      headingSelector: 'h2, h3, h4',
-      collapseDepth: 4
-    });
-  }
-</script>
-{{ end }}
-{{ end }}
+{{ $include_toc := .Params.include_toc}}{{ if .Site.GoogleAnalytics }}  <!-- Google Analytics -->  {{ template "_internal/google_analytics_async.html" . }}{{ end }}{{ partial "footer/font-awesome-js.html" . }}{{ partial "highlight-js.html" . }}{{ with .Site.Params.toc }}	{{ if and (eq . "tocbot") (ne $include_toc false) }}	<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.js"></script>	<script type="text/javascript">		if (tocbot) {		  tocbot.init({		    // Where to render the table of contents.		    tocSelector: '.toc',		    // Where to grab the headings to build the table of contents.		    contentSelector: '.post',		    // Which headings to grab inside of the contentSelector element.		    headingSelector: 'h2, h3, h4',		    collapseDepth: 4		  });		}	</script>	{{ end }}{{ end }}

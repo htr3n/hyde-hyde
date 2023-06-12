@@ -1,46 +1,62 @@
+@import "variables";
+@import "mixins";
+
+$sidebar-data-margin-left: 1.5rem;
+
 .sidebar {
   background-color: $sidebar-color;
   color: rgb(255, 255, 255);
   color: rgba(255, 255, 255, 0.5);
-  padding: 2rem 1rem;
+  padding-top: 2rem;
   text-align: center;
+
   a {
     color: $gray-1;
     border: none;
+
     &:hover {
       color: $link-color;
     }
+
     &:focus {
       color: $link-color;
     }
   }
+
   .sidebar-about {
     text-align: center;
   }
-  .author-image {
+
+  .author_image {
     display: block;
     margin-top: 4px;
   }
 }
 
+.menu-content {
+  //padding: 2rem 0;
+}
+
 .sidebar-nav {
-  text-align: center;
+  text-align: left;
   list-style: none;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
-  padding-left: 0;
+  font-size: 16px;
+  line-height: 1.8rem;
 }
 
 .sidebar-nav-item {
   display: block;
   line-height: 1.75;
+
   .active {
     font-weight: bold;
   }
 }
-.site__title {
-  font-size: $site__title-font-size;
+
+.site_title {
+  font-size: $site_title_font_size;
   margin-bottom: 0.5rem;
+
   a:hover {
     border: none;
   }
@@ -51,8 +67,10 @@
   font-weight: 300;
 }
 
-.social {
-  text-align: center;
+.sitebar-social {
+  text-align: left;
+  margin-left: 2rem;
+
   a {
     padding: 0 4px;
     @include link-no-decoration();
@@ -60,16 +78,16 @@
 }
 
 .img--circle {
-	border-radius: 50%;
+  border-radius: 50%;
 }
 
 .img--headshot {
-	height: 115px;
-	width: 115px;
+  height: 115px;
+  width: 115px;
 }
 
 .img--caption {
-	font-style: italic;
+  font-style: italic;
 }
 
 %small-center-text {
@@ -78,10 +96,18 @@
   text-align: center;
 }
 
-.copyright {
+.sidebar-copyright {
   padding-top: 1rem;
-	@extend %small-center-text;
+  @extend %small-center-text;
+
+  span {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    margin-left: 1.5rem;
+  }
 }
+
 .builtwith {
   padding-top: .2rem;
   @extend %small-center-text;

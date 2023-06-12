@@ -1,58 +1,49 @@
 pre {
-	//border: 1px solid $gray-1;
-	//border-radius: 2px;
-	tab-size: 2;
-	//width: 111%;
-	//margin-left: -11%;
-	//padding-left: 9%;
-	//padding-right: 2%;
-	//background: #29292e;
-	code {
-		white-space: pre-wrap;
-	}
-}
+  border: 1px solid #F9F9F9E7;
+  border-radius: 10px;
 
-%code-font {
-	font-family: $code-font-family;
-	font-size: $code-font-size;
-}
-
-%code-in-rounded-box {
-	border-radius: 4px;
-	padding: 2px 4px;
-	color: #bf616a;
-	background-color: #f9f2f4;
-}
-
-%code-style-codersblock {
-	padding: 2px 4px;
-	border: 1px dotted #adb5db;
-	background-color: $gray-1;
-}
-
-%code-style-npf {
-	padding: .1em .1em;
-	color: #ab5979;
-	border-radius: 3px;
-}
-
-a {
-	code {
-		color: $link-color;
-	}
+  code {
+    white-space: pre-wrap;
+  }
 }
 
 code {
-	@extend %code-font;
-	@extend %code-style-npf;
+  background: #f0f0f0;
+  text-shadow: 0 1px #fff;
+  font-size: 0.85em;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  @extend %code-font;
+  @extend %code-style-npf;
 }
 
-// highlight.js
-.hljs {
-	font-family: $code-font-family;
-	font-size: $code-fence-font-size;
-	line-height: $root-line-height;
-	white-space: pre;
-	border: 1px solid $gray-3;
-	border-radius: 4px;
+%code-font {
+  font-family: $code-font-family;
+  font-size: $code-font-size;
 }
+
+%code-in-rounded-box {
+  border-radius: 4px;
+  padding: 2px 4px;
+  color: #bf616a;
+  background-color: #f9f2f4;
+}
+
+%code-style-codersblock {
+  padding: 2px 4px;
+  border: 1px dotted #adb5db;
+  background-color: $gray-1;
+}
+
+%code-style-npf {
+  padding: .1em .1em;
+  color: #ab5979;
+  border-radius: 3px;
+}
+
+//a {
+//  code {
+//    color: $link-color;
+//  }
+//}
+

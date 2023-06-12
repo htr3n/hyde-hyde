@@ -2,6 +2,7 @@
 <div class="sidebar">
   <div class="container {{ with .Site.Params.sidebarSticky }}sidebar-sticky{{ end }}">
     <div class="sidebar-about">
+	  <!-- 标题  -->
       <span class="site__title">
         <a href="{{ .Site.BaseURL }}">
         {{ with .Site.Params.logoimage }}
@@ -13,6 +14,7 @@
         {{ end }}
         </a>
       </span>
+	  <!-- 头像  -->
       {{ if and (isset .Site.Params "authorimage") (not (isset .Site.Params.social "gravatar")) }}
         {{ with .Site.Params.authorimage }}
         {{ $strippedSlash := ($.Site.Params.authorimage | replaceRE "^(/)+(.*)" "$2") }}
@@ -27,16 +29,19 @@
           <img src="https://www.gravatar.com/avatar/{{md5 .}}?s=240&d=mp" class="img--circle img--headshot element--center" alt="gravatar">
         </div>
       {{ end }}
+	  <!-- 站点描述  -->
       <p class="site__description">
         {{ with .Site.Params.description }} {{.}} {{end}}
       </p>
     </div>
+  
+	<!-- 菜单栏  -->
     <div class="collapsible-menu">
       <input type="checkbox" id="menuToggle">
       <label for="menuToggle">{{ .Site.Title }}</label>
       <div class="menu-content">
-        {{ partial "sidebar/menu.html" . }}
         {{ partial "sidebar/social.html" . }}
+        {{ partial "sidebar/menu.html" . }}
       </div>
     </div>
     {{ partial "sidebar/copyright.html" . }}

@@ -1,32 +1,42 @@
-{{ $include_toc := .Params.include_toc}}
+<!--<aside>-->
+<!--	{{ .TableOfContents }}-->
+<!--</aside>-->
 <article>
-  <header>
-    <h1>{{ .Title }}</h1>
-    {{ with .Params.subtitle }}
-    <span class="post__subtitle">
-      {{.}}
-    </span>
-    {{ end }}
-    {{ partial "page-single/post-meta.html" . }}
-  </header>
-  {{ $tableOfContents := .TableOfContents }}
-  {{ with .Site.Params.toc }}
-  {{ if ne $include_toc false }}
-    <div class="toc-wrapper">
-      <input type="checkbox" id="tocToggle">
-      <label for="tocToggle">Table of Content</label>
-      {{ if eq . "hugo" }}
-          {{ $tableOfContents }}
-      {{ else if eq . "tocbot"}}
-        <div class="toc" id="TableOfContents"></div>
-      {{ end }}
-    </div>
-  {{ end }}
-  {{ end }}
-  <div class="post">
-    {{ .Content }}
-  </div>
-  {{ partial "page-single/post-navigation.html" . }}
-  {{ partial "page-single/post-related.html" . }}
-  {{ partial "page-single/post-comment.html" . }}
+	<header>
+		<h1>{{ .Title }}</h1>
+		{{ with .Params.subtitle }}
+		<span class="post__subtitle">
+			{{.}}
+    	</span>
+		{{ end }}
+		{{ partial "page-single/post-meta.html" . }}
+	</header>
+	
+	
+	<!-- toc-->
+	{{ $include_toc := .Params.include_toc}}
+	{{ $tableOfContents := .TableOfContents }}
+	{{ with .Site.Params.toc }}
+	{{ if ne $include_toc false }}
+	<div class="toc-wrapper">
+		<input type="checkbox" id="tocToggle">
+		<label for="tocToggle">Table of Content</label>
+		{{ if eq . "hugo" }}
+		{{ $tableOfContents }}
+		{{ else if eq . "tocbot"}}
+		<div class="toc" id="TableOfContents"></div>
+		{{ end }}
+	</div>
+	{{ end }}
+	{{ end }}
+	
+	<!-- content -->
+	<div class="post">
+		{{ .Content }}
+	</div>
+	{{ partial "page-single/post-navigation.html" . }}
+	{{ partial "page-single/post-related.html" . }}
+	{{ partial "page-single/post-comment.html" . }}
 </article>
+
+

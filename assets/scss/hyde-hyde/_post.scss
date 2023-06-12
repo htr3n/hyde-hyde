@@ -19,15 +19,15 @@
 
 .post__title {
   background-image: -webkit-linear-gradient(left, $gradient-color-1, $gradient-color-2); /* For Chrome and Safari */
-  background-image:    -moz-linear-gradient(left, $gradient-color-1, $gradient-color-2); /* For old Fx (3.6 to 15) */
-  background-image:     -ms-linear-gradient(left, $gradient-color-1, $gradient-color-2); /* For pre-releases of IE 10*/
-  background-image:      -o-linear-gradient(left, $gradient-color-1, $gradient-color-2); /* For old Opera (11.1 to 12.0) */
-  background-image:         linear-gradient(to right, $gradient-color-1, $gradient-color-2); /* Standard syntax; must be last */
-  color:transparent;
+  background-image: -moz-linear-gradient(left, $gradient-color-1, $gradient-color-2); /* For old Fx (3.6 to 15) */
+  background-image: -ms-linear-gradient(left, $gradient-color-1, $gradient-color-2); /* For pre-releases of IE 10*/
+  background-image: -o-linear-gradient(left, $gradient-color-1, $gradient-color-2); /* For old Opera (11.1 to 12.0) */
+  background-image: linear-gradient(to right, $gradient-color-1, $gradient-color-2); /* Standard syntax; must be last */
+  color: transparent;
   -webkit-background-clip: text;
-  background-clip: text; 
- }
- 
+  background-clip: text;
+}
+
 .post__subtitle {
   display: block;
   font-size: $post__subtitle-font-size;
@@ -39,4 +39,34 @@
   li {
     font-size: 0.9rem;
   }
+}
+
+.post ul, ol {
+  margin: 0.3rem 1rem;
+  padding: 0.3rem 1rem;
+}
+
+.post ul li {
+  list-style: circle;
+}
+
+// 相关文章
+.post__related {
+  background: beige;
+  padding: 5px 15px;
+  margin: 15px 0;
+  border-radius: 5px;
+  border: 1px dashed #895454ab;
+}
+
+.related-title:before {
+  content: '\0F17';
+  bottom: 6px;
+  position: relative;
+  margin-right: 5px;
+}
+
+.post__related .related-title {
+  background: none;
+  border-bottom-style: double;
 }
