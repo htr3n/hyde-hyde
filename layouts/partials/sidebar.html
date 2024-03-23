@@ -8,6 +8,9 @@
         {{ $strippedSlash := ($.Site.Params.logoimage | replaceRE "^(/)+(.*)" "$2") }}
         {{ $logoImage := (printf "%s%s" $.Site.BaseURL $strippedSlash) }}
           <img src="{{$logoImage}}" alt="Logo Image" class="element--center">
+          {{with $.Site.Params.showTitleWithLogo}} 
+            {{ $.Site.Title }} 
+          {{end}}           
         {{ else }}
           {{ .Site.Title }}
         {{ end }}
