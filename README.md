@@ -2,7 +2,7 @@
 
 # Hyde-hyde
 
-__`Hyde-hyde`__ is a [Hugo](https://gohugo.io)'s theme inspired and derived from @spf13's [Hyde](https://github.com/spf13/hyde.git) and [Nate Finch's blog](https://npf.io). 
+__`Hyde-hyde`__ is a [Hugo](https://gohugo.io)'s theme inspired and derived from @spf13's [Hyde](https://github.com/spf13/hyde.git) and [Nate Finch's blog](https://npf.io).
 
 > NOTICE: Maintainers / collaborators seeking: As I'm underwater with my full time job at the moment, I'm actively looking for and welcome any new maintainers or collaborators. If you are interested, comment on [#130](https://github.com/htr3n/hyde-hyde/issues/130) and I can add you to the project. TIA.
 
@@ -24,6 +24,10 @@ For more details, please refer to [CHANGELOG](https://github.com/htr3n/hyde-hyde
 
 ## Usage
 
+## Quick Start
+
+Check `config.toml` of [exampleSite][example].
+
 ### Installation
 
 __`Hyde-hyde`__ can be easily installed as many other Hugo themes:
@@ -40,7 +44,7 @@ $ git submodule add https://github.com/htr3n/hyde-hyde.git themes/hyde-hyde
 
 After that, choose `hyde-hyde` as the main theme.
 
-* `config.toml` 
+* `config.toml`
 
 ```toml
 theme = "hyde-hyde"
@@ -60,16 +64,16 @@ __`Hyde-hyde`__ essentially inherits most of Hyde's [options](https://github.com
 
 * `highlightjs = true`: use [highlight.js](https://highlightjs.org) instead of Hugo built-in support for code highlighting
 
-  * `highlightjsstyle="highlight-style"`: only when `highlightjs = true`, please choose one of many _highlight.js_'s [styles](https://highlightjs.org/static/demo).
+  * `highlightjsstyle="highlight-style"`: only when `highlightjs = true`, please choose one of many _highlight.js_'s [styles](https://highlightjs.org/static/demo). style name should be lower cased and concatenated with `-`. For example, `Atelier Cave Light` should be `atelier-cave-light`
   * Since [v2.0.1](https://github.com/htr3n/hyde-hyde/tree/v2.0.1), highlighting for each page can be fine-tuned in the front matter, for example
     * `highlight = false`  (default `true`)
-    * `highlightjslanguages = ["swift", "objectivec"]` 
+    * `highlightjslanguages = ["swift", "objectivec"]`
 
 * `postNavigation = true|false` (default `true`): Setting to `false` will disable the navigation _Previous Post_/ _Next Post_
 
 * `relatedPosts = false|true` (default `false`): Setting to `true` allows related posts. Please refer [here](https://gohugo.io/content-management/related) for more details on related contents with Hugo.
 
-* `GraphCommentId = "your-graphcomment-id"`: to use [GraphComment](https://graphcomment.com) instead of the built-in [Disqus](https://disqus.com). This option should be used exclusively with `disqusShortname = "disqus-shortname"`.
+* `GraphCommentId = "your-graphcomment-id"`: to use [GraphComment](https://graphcomment.com) instead of the built-in [Disqus](https://disqus.com). This option should be used exclusively with `disqusShortname = "disqus-shortname"` as top-level config.
 
 * `UtterancesRepo = "owner/repo-name"`: to use [Utterances](https://utteranc.es/) instead of the built-in [Disqus](https://disqus.com). This option should be used exclusively with `disqusShortname = "disqus-shortname"`.
   * `UtterancesIssueTerm = "pathname"` Method for Utterances to match issue's to posts (pathname, url, title, og:title)
@@ -87,8 +91,8 @@ __`Hyde-hyde`__ essentially inherits most of Hyde's [options](https://github.com
   	github = "htr3n"
   	...
   ```
-  
-*  `include_toc = false`: Setting to `false` in FrontMatter will disable too short TOC data as your want. 
+
+*  `include_toc = false`: Setting to `false` in FrontMatter will disable too short TOC data as your want.
 
   * Per PR [#56](https://github.com/htr3n/hyde-hyde/commit/5ed13e17400bbc09a342b60fd50cd9fe3e6f1525), Gravatar pics can be used exclusively to `.Site.Params.authorimage` via the parameter `.Site.Params.social.gravatar`
 
@@ -115,7 +119,7 @@ Since version 2.0+, I added a portfolio page just in case. If you need it, simpl
 
 In the folder `content` , create a subfolder `portfolio` and use the following folder/content structure as reference.
 
-```
+```bash
 $ tree portfolio
 portfolio
 ├── _index.md
@@ -135,6 +139,7 @@ As I design the section _portfolio_ to be rendered as _list_,  `_index.md` can b
 title: 'Projects'
 ---
 ```
+
 The remaining of `_index.md` will be ignored.
 
 For each project, just create a Markdown file with the following parameters in the front matter:
@@ -162,11 +167,13 @@ Here is a longer summary of the project. You can write as long as you wish.
 If you want to adjust the portfolio page to your needs, please have a look at the [main template](https://github.com/htr3n/hyde-hyde/blob/master/layouts/portfolio/list.html), that uses this [partial template](https://github.com/htr3n/hyde-hyde/blob/master/layouts/partials/portfolio/content.html) and [this SCSS style](https://github.com/htr3n/hyde-hyde/blob/master/assets/scss/hyde-hyde/_project.scss).
 
 ### Posts in home page
+
 By default hugo will show in your home page the most populated section.
 This means that if you have more projects than posts, by default your home page will list your projects instead of your posts.
 If you want to change this behaviour you can change the [mainsections](https://gohugo.io/functions/where/#mainsections).
-For example, for the [exampleSite](https://github.com/htr3n/hyde-hyde/tree/master/exampleSite) this is how you should change the `config.toml` file:
-```
+For example, for the [exampleSite][example] this is how you should change the `config.toml` file:
+
+```toml
 [params]
     mainSections = ["posts"]
 ```
@@ -200,3 +207,5 @@ For example, for the [exampleSite](https://github.com/htr3n/hyde-hyde/tree/maste
 ## License
 
 Open sourced under the [MIT license](LICENSE.md)
+
+[example]: https://github.com/htr3n/hyde-hyde/tree/master/exampleSite
